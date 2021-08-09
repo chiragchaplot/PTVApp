@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		F6A487EF26BABBB800A07C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A487EE26BABBB800A07C44 /* AppDelegate.swift */; };
 		F6A487F126BABBB800A07C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A487F026BABBB800A07C44 /* SceneDelegate.swift */; };
-		F6A487F326BABBB800A07C44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A487F226BABBB800A07C44 /* ViewController.swift */; };
 		F6A487F626BABBB800A07C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A487F426BABBB800A07C44 /* Main.storyboard */; };
 		F6A487F826BABBB800A07C44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A487F726BABBB800A07C44 /* Assets.xcassets */; };
 		F6A487FB26BABBB800A07C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A487F926BABBB800A07C44 /* LaunchScreen.storyboard */; };
+		F6A4885E26BF484500A07C44 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4885D26BF484500A07C44 /* HomeViewController.swift */; };
+		F6A4886026BF6EC700A07C44 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4885F26BF6EC700A07C44 /* HomeViewModel.swift */; };
+		F6A4886426BF6F2500A07C44 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4886326BF6F2500A07C44 /* APIHandler.swift */; };
+		F6A4886626BF6F3300A07C44 /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4886526BF6F3300A07C44 /* APILoader.swift */; };
+		F6A4886826BF6F3C00A07C44 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4886726BF6F3C00A07C44 /* APIPath.swift */; };
+		F6A4886A26BF6F4400A07C44 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4886926BF6F4400A07C44 /* APIEnvironment.swift */; };
+		F6A4886C26BF6F7200A07C44 /* RequestHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4886B26BF6F7200A07C44 /* RequestHandler+Extension.swift */; };
+		F6A4886E26BF6F8400A07C44 /* ResponseHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4886D26BF6F8400A07C44 /* ResponseHandler+Extension.swift */; };
+		F6A4887026BF759500A07C44 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4886F26BF759500A07C44 /* Constants.swift */; };
+		F6A4887326BF7D0F00A07C44 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887226BF7D0F00A07C44 /* String+Extensions.swift */; };
+		F6A4887626C0B89C00A07C44 /* GetStopsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887526C0B89C00A07C44 /* GetStopsAPI.swift */; };
+		F6A4887826C0BB0800A07C44 /* StopsAroundLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887726C0BB0800A07C44 /* StopsAroundLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F6A487EB26BABBB800A07C44 /* PTVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A487EE26BABBB800A07C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6A487F026BABBB800A07C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6A487F226BABBB800A07C44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6A487F526BABBB800A07C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6A487F726BABBB800A07C44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A487FA26BABBB800A07C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6A487FC26BABBB800A07C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6A4885D26BF484500A07C44 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6A4885F26BF6EC700A07C44 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F6A4886326BF6F2500A07C44 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		F6A4886526BF6F3300A07C44 /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
+		F6A4886726BF6F3C00A07C44 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
+		F6A4886926BF6F4400A07C44 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		F6A4886B26BF6F7200A07C44 /* RequestHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestHandler+Extension.swift"; sourceTree = "<group>"; };
+		F6A4886D26BF6F8400A07C44 /* ResponseHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseHandler+Extension.swift"; sourceTree = "<group>"; };
+		F6A4886F26BF759500A07C44 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F6A4887226BF7D0F00A07C44 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		F6A4887526C0B89C00A07C44 /* GetStopsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopsAPI.swift; sourceTree = "<group>"; };
+		F6A4887726C0BB0800A07C44 /* StopsAroundLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsAroundLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,98 @@
 		F6A487ED26BABBB800A07C44 /* PTVApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4887426C0B88D00A07C44 /* Domain */,
+				F6A4887126BF7D0200A07C44 /* Extensions */,
+				F6A4886126BF6F0C00A07C44 /* Service */,
+				F6A4885C26BE7C2F00A07C44 /* Resources */,
+				F6A4885B26BE7C2900A07C44 /* Utils */,
+				F6A4885A26BE7C2300A07C44 /* Model */,
+				F6A4885926BE7C1C00A07C44 /* ViewModel */,
+				F6A4885826BE7C0E00A07C44 /* Controller */,
+			);
+			path = PTVApp;
+			sourceTree = "<group>";
+		};
+		F6A4885826BE7C0E00A07C44 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4885D26BF484500A07C44 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6A4885926BE7C1C00A07C44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4885F26BF6EC700A07C44 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6A4885A26BE7C2300A07C44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4887726C0BB0800A07C44 /* StopsAroundLocation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6A4885B26BE7C2900A07C44 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4886F26BF759500A07C44 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F6A4885C26BE7C2F00A07C44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				F6A487EE26BABBB800A07C44 /* AppDelegate.swift */,
 				F6A487F026BABBB800A07C44 /* SceneDelegate.swift */,
-				F6A487F226BABBB800A07C44 /* ViewController.swift */,
 				F6A487F426BABBB800A07C44 /* Main.storyboard */,
 				F6A487F726BABBB800A07C44 /* Assets.xcassets */,
 				F6A487F926BABBB800A07C44 /* LaunchScreen.storyboard */,
 				F6A487FC26BABBB800A07C44 /* Info.plist */,
 			);
-			path = PTVApp;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6A4886126BF6F0C00A07C44 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4886226BF6F1200A07C44 /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F6A4886226BF6F1200A07C44 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4886326BF6F2500A07C44 /* APIHandler.swift */,
+				F6A4886526BF6F3300A07C44 /* APILoader.swift */,
+				F6A4886726BF6F3C00A07C44 /* APIPath.swift */,
+				F6A4886926BF6F4400A07C44 /* APIEnvironment.swift */,
+				F6A4886B26BF6F7200A07C44 /* RequestHandler+Extension.swift */,
+				F6A4886D26BF6F8400A07C44 /* ResponseHandler+Extension.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6A4887126BF7D0200A07C44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4887226BF7D0F00A07C44 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F6A4887426C0B88D00A07C44 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4887526C0B89C00A07C44 /* GetStopsAPI.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +242,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A487F326BABBB800A07C44 /* ViewController.swift in Sources */,
+				F6A4887626C0B89C00A07C44 /* GetStopsAPI.swift in Sources */,
+				F6A4887826C0BB0800A07C44 /* StopsAroundLocation.swift in Sources */,
 				F6A487EF26BABBB800A07C44 /* AppDelegate.swift in Sources */,
+				F6A4887026BF759500A07C44 /* Constants.swift in Sources */,
 				F6A487F126BABBB800A07C44 /* SceneDelegate.swift in Sources */,
+				F6A4886426BF6F2500A07C44 /* APIHandler.swift in Sources */,
+				F6A4887326BF7D0F00A07C44 /* String+Extensions.swift in Sources */,
+				F6A4886E26BF6F8400A07C44 /* ResponseHandler+Extension.swift in Sources */,
+				F6A4885E26BF484500A07C44 /* HomeViewController.swift in Sources */,
+				F6A4886826BF6F3C00A07C44 /* APIPath.swift in Sources */,
+				F6A4886026BF6EC700A07C44 /* HomeViewModel.swift in Sources */,
+				F6A4886A26BF6F4400A07C44 /* APIEnvironment.swift in Sources */,
+				F6A4886626BF6F3300A07C44 /* APILoader.swift in Sources */,
+				F6A4886C26BF6F7200A07C44 /* RequestHandler+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +404,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TCT482N32;
-				INFOPLIST_FILE = PTVApp/Info.plist;
+				INFOPLIST_FILE = PTVApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chazzit.PTVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +424,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TCT482N32;
-				INFOPLIST_FILE = PTVApp/Info.plist;
+				INFOPLIST_FILE = PTVApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chazzit.PTVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
