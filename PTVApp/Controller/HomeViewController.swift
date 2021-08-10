@@ -13,7 +13,7 @@ import CoreLocation
 class HomeViewController: UIViewController {
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 2000
+    let regionInMeters: Double = 10000
     var mapView = MKMapView()
     var homeViewModel = HomeViewModel()
     
@@ -43,9 +43,9 @@ class HomeViewController: UIViewController {
                 }
             } else {
                 if let stopList = model {
-//                        DispatchQueue.main.async {
-//
-//                        }
+                    DispatchQueue.main.async {
+                        self.addAnnotations(stopList)
+                    }
                 }
                 
             }
@@ -109,6 +109,45 @@ class HomeViewController: UIViewController {
 
             present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    func addAnnotations(_ stopList: StopsAroundLocation) {
+        let stopAnnotationsList = self.homeViewModel.returnAnnotations(stopAroundLocation: stopList)
+        self.mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.addAnnotations(stopAnnotationsList)
+    }
+}
+
+extension HomeViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let stopAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
+            stopAnnotationView.animatesWhenAdded = true
+            stopAnnotationView.titleVisibility = .adaptive
+            stopAnnotationView.subtitleVisibility = .adaptive
+            return stopAnnotationView
+        }
+        return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print (view.annotation?.title)
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView) -> MKAnnotationView? {
+        
+        let reuseId = "test"
+        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+        if anView == nil {
+            let button = MyButton(type: .detailDisclosure)
+            button.addTarget(self, action: #selector(HomeViewController.showAnnotationDisclosure(_:)), forControlEvents: .TouchUpInside)
+            anView!.rightCalloutAccessoryView = button
+        }
+        
+        if let button = anView!.rightCalloutAccessoryView as? MyButton {
+                button.annotation = annotation
+            }
+
+        return anView
     }
 }
 

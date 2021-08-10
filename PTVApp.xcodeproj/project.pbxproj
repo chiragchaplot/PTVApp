@@ -24,6 +24,8 @@
 		F6A4887326BF7D0F00A07C44 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887226BF7D0F00A07C44 /* String+Extensions.swift */; };
 		F6A4887626C0B89C00A07C44 /* GetStopsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887526C0B89C00A07C44 /* GetStopsAPI.swift */; };
 		F6A4887826C0BB0800A07C44 /* StopsAroundLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887726C0BB0800A07C44 /* StopsAroundLocation.swift */; };
+		F6A4887A26C168A400A07C44 /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887926C168A400A07C44 /* StopAnnotation.swift */; };
+		F6A4887C26C20E6300A07C44 /* ButtonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4887B26C20E6300A07C44 /* ButtonAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		F6A4887226BF7D0F00A07C44 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F6A4887526C0B89C00A07C44 /* GetStopsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopsAPI.swift; sourceTree = "<group>"; };
 		F6A4887726C0BB0800A07C44 /* StopsAroundLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsAroundLocation.swift; sourceTree = "<group>"; };
+		F6A4887926C168A400A07C44 /* StopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
+		F6A4887B26C20E6300A07C44 /* ButtonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				F6A4886F26BF759500A07C44 /* Constants.swift */,
+				F6A4887926C168A400A07C44 /* StopAnnotation.swift */,
+				F6A4887B26C20E6300A07C44 /* ButtonAnnotation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -250,12 +256,14 @@
 				F6A4886426BF6F2500A07C44 /* APIHandler.swift in Sources */,
 				F6A4887326BF7D0F00A07C44 /* String+Extensions.swift in Sources */,
 				F6A4886E26BF6F8400A07C44 /* ResponseHandler+Extension.swift in Sources */,
+				F6A4887C26C20E6300A07C44 /* ButtonAnnotation.swift in Sources */,
 				F6A4885E26BF484500A07C44 /* HomeViewController.swift in Sources */,
 				F6A4886826BF6F3C00A07C44 /* APIPath.swift in Sources */,
 				F6A4886026BF6EC700A07C44 /* HomeViewModel.swift in Sources */,
 				F6A4886A26BF6F4400A07C44 /* APIEnvironment.swift in Sources */,
 				F6A4886626BF6F3300A07C44 /* APILoader.swift in Sources */,
 				F6A4886C26BF6F7200A07C44 /* RequestHandler+Extension.swift in Sources */,
+				F6A4887A26C168A400A07C44 /* StopAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

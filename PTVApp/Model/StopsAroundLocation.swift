@@ -31,7 +31,7 @@ struct Status: Codable {
 
 // MARK: - Stop
 struct Stop: Codable {
-    let disruptionIDS: [JSONAny]
+    //let disruptionIDS: [JSONAny]
     let stopDistance: Double
     let stopSuburb: StopSuburb
     let stopName: String
@@ -42,7 +42,7 @@ struct Stop: Codable {
     let stopSequence: Int
 
     enum CodingKeys: String, CodingKey {
-        case disruptionIDS = "disruption_ids"
+        // disruptionIDS = "disruption_ids"
         case stopDistance = "stop_distance"
         case stopSuburb = "stop_suburb"
         case stopName = "stop_name"

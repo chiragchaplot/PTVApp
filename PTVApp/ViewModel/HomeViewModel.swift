@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import MapKit
+import os
 
 class HomeViewModel {
     var request : GetStopsAPI
     var apiLoader : APILoader<GetStopsAPI>
+    
     
     init() {
         request = GetStopsAPI()
@@ -30,6 +33,15 @@ class HomeViewModel {
                 completion(model, nil)
             }
         }
-        
+    }
+    
+    func returnAnnotations(stopAroundLocation: StopsAroundLocation) -> [StopAnnotation] {
+        var stopAnnotations = [StopAnnotation]()
+        for stop in stopAroundLocation.stops {
+            //Create an annotation
+            let stopMarker = StopAnnotation(stopLong: stop.stopLongitude, stopLat: stop.stopLatitude, title: stop.stopName, subtitle: "Routes: " + String(stop.routes.count))
+            stopAnnotations.append(stopMarker)
+        }
+        return stopAnnotations
     }
 }
