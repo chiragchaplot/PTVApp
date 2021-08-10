@@ -39,7 +39,7 @@ class HomeViewModel {
         var stopAnnotations = [StopAnnotation]()
         for stop in stopAroundLocation.stops {
             //Create an annotation
-            let stopMarker = StopAnnotation(stopLong: stop.stopLongitude, stopLat: stop.stopLatitude, title: stop.stopName, subtitle: "Routes: " + String(stop.routes.count))
+            let stopMarker = StopAnnotation(stopLong: stop.stopLongitude, stopLat: stop.stopLatitude, title: stop.stopName, subtitle: "Routes: " + String(stop.routes.count), stopType: stop.routes.count)
             stopAnnotations.append(stopMarker)
         }
         return stopAnnotations

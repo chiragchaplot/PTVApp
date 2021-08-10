@@ -13,8 +13,30 @@ import CoreLocation
 class HomeViewController: UIViewController {
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 10000
+    let regionInMeters: Double = 1000
     var mapView = MKMapView()
+    let searchButton : UIButton = {
+       let button = UIButton()
+        button.setTitle("Enter an Address", for: .normal)
+        button.setTitleColor(.systemGray, for: .normal)
+        button.addTarget(self, action: #selector(findStopsNearAddress), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.sizeToFit()
+        button.backgroundColor = .white
+        return button
+    }()
+    
+    let takeMeAwayButton : UIButton = {
+        let button = UIButton()
+         button.setTitle("Take Me Away", for: .normal)
+         button.setTitleColor(.white, for: .normal)
+         button.addTarget(self, action: #selector(findStopsNearAddress), for: .touchUpInside)
+         button.translatesAutoresizingMaskIntoConstraints = false
+         button.sizeToFit()
+         button.backgroundColor = .black
+         return button
+     }()
+
     var homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
@@ -25,8 +47,8 @@ class HomeViewController: UIViewController {
     
     func loadData() {
         addMapView()
-        getStops()
-        
+        addButtonsToView()
+        setUpLayout()
     }
     
     func getStops() {
@@ -64,10 +86,27 @@ class HomeViewController: UIViewController {
         mapView.mapType = MKMapType.standard
         mapView.isZoomEnabled = true
         mapView.isScrollEnabled = true
-        
+        mapView.translatesAutoresizingMaskIntoConstraints = false
         mapView.center = view.center
         
         view.addSubview(mapView)
+    }
+    
+    func setUpLayout() {
+        
+        mapView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
+        mapView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
+        mapView.leadingAnchor.constraint(equalTo:view.leadingAnchor).isActive = true
+        mapView.trailingAnchor.constraint(equalTo:view.trailingAnchor).isActive = true
+
+        searchButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        searchButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        searchButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        searchButton.layer.cornerRadius = 10
+        searchButton.layer.borderWidth = 1
+        searchButton.clipsToBounds = true
+        
+        
     }
     
     func setupLocationManager() {
@@ -116,6 +155,18 @@ class HomeViewController: UIViewController {
         self.mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapView.addAnnotations(stopAnnotationsList)
     }
+    
+    func addButtonsToView() {
+        view.addSubview(searchButton)
+        
+    }
+    
+    @objc
+    func findStopsNearAddress() {
+        print("Button Pressed")
+    }
+    
+    
 }
 
 extension HomeViewController: MKMapViewDelegate {
@@ -130,24 +181,7 @@ extension HomeViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print (view.annotation?.title)
-    }
-    
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView) -> MKAnnotationView? {
         
-        let reuseId = "test"
-        var anView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-        if anView == nil {
-            let button = MyButton(type: .detailDisclosure)
-            button.addTarget(self, action: #selector(HomeViewController.showAnnotationDisclosure(_:)), forControlEvents: .TouchUpInside)
-            anView!.rightCalloutAccessoryView = button
-        }
-        
-        if let button = anView!.rightCalloutAccessoryView as? MyButton {
-                button.annotation = annotation
-            }
-
-        return anView
     }
 }
 
@@ -165,9 +199,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
-            mapView.showsUserLocation = true
-            centerViewOnUserLocation()
-            locationManager.startUpdatingLocation()
+            whenLocationAvailable()
             break
         case .denied:
             // Show alert instructing them how to turn on permissions
@@ -182,5 +214,19 @@ extension HomeViewController: CLLocationManagerDelegate {
         @unknown default:
             fatalError()
         }
+    }
+    
+    func whenLocationAvailable() {
+        mapView.showsUserLocation = true
+        centerViewOnUserLocation()
+        locationManager.startUpdatingLocation()
+        view.addSubview(takeMeAwayButton)
+        takeMeAwayButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        takeMeAwayButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 80).isActive = true
+        takeMeAwayButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -80).isActive = true
+        takeMeAwayButton.layer.cornerRadius = 10
+        takeMeAwayButton.layer.borderWidth = 1
+        takeMeAwayButton.clipsToBounds = true
+        getStops()
     }
 }
